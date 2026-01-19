@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Relative Object Pose with Coupled Matching-Pose Network</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.onload = function() {
+      var videos = document.getElementsByTagName('video');
+      for (var i = 0; i < videos.length; i++) {
+        videos[i].setAttribute('preload', 'auto');
+      }
+    }
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Learning Relative Object Pose with Coupled Matching-Pose Network</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=wsNHZlIAAAAJ&view_op=list_works&gmla=APjjwubZbbOjZ_1Y-hqGZ7N3AA0tFRyNPFmsiUtMhXaJacYDa_dNA9j5iGJ3YpDReeHRNK5bzxlGxAq6SVg9B5uhGS-5D3IGAz0chmIJIm4Yo1u04HlJB2H4zow9utZgJqyS5teS9IrJz18">Zhengtai Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=_SKooBYAAAAJ&hl=zh-CN">Rui Song</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=3hIrGCMAAAAJ&view_op=list_works&gmla=APjjwub3cuLTWbqrCg5XnWZl-ELWXdWiAYw_0fFCdlG9OQpxTnbMwTfTquODIalTBZB_B50Hg79O0RMOK8hugUCchbTW4iRTjfr-fbQ6KGch0pZ-zUVOxIgP6_orNjRdMLWofM-lPAOnwCk">Jiafeng Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=Ccu3-acAAAAJ&view_op=list_works&sortby=pubdate">Jiaojiao Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=n6mG4pIAAAAJ&hl=zh-CN">Kailang Cao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=kW1QrJYAAAAJ&hl=en">David Ferstl</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=dhmdaoQAAAAJ&hl=en">Yinlin Hu</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>State Key Laboratory of ISN, Xidian University</span>
+            <span class="author-block"><sup>2</sup>MagicLeap</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+<!--                <a href="https://arxiv.org/"-->
+                  <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+<!--                <a href="https://arxiv.org/"-->
+                  <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+<!--                <a href="https://github.com"-->
+                  <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="video-wrapper">
+      <video id="teaser" autoplay muted loop playsinline>
+        <source src="./static/videos/video1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered section-title">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-justified paper-text">
+            <p>
+              We propose a relative object pose estimation framework that uses a RGB image of an object as the reference and predicts the relative
+              pose of a query view. Existing methods often rely on access to the target’s 3D model, retraining for novel objects, the use of multiple
+              reference images as hypotheses, or assume a purely synthetic experimental setup. To overcome these limitations, we introduce a method
+              that first predicts dense pixel-level matching between the query image and the reference image, and then estimates a relative pose based
+              on this dense matching map. These two stages are incorporated into a recurrent framework, allowing for joint iterative refinement of
+              both the matching map and the relative pose. Our approach requires only a single reference image, is trained exclusively on synthetic
+              datasets, and generalizes to real-world images without retraining or access to the 3D model of the target object. Extensive experiments
+              on both synthetic and real cluttered images show that our method outperforms most state-of-the-art approaches significantly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <div class="hero-body">
+      <div class="image-container">
+        <img src="./static/images/img1.png" alt="CMPose & CMPose">
+      </div>
+      <div class="content has-text-justified fig_1-text">
+        <p>
+          <b>Overview of the proposed method. </b> The reference and query images are first passed through two weight-shared encoders to extract
+          feature representations, which are then used to construct a 4D correlation volume. A GRU-based recurrent module, initialized with an
+          all-zero matching map, iteratively updates the dense matching field through a lightweight matching branch. At each iteration, a small
+          pose regression head predicts the relative pose from the updated matching map. These two components operate jointly within the recurrent
+          refinement framework, allowing the dense correspondences and the relative pose to be optimized together in an iterative manner.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+  .video-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .video-table td {
+    padding: 10px;
+    text-align: center !important; 
+    vertical-align: middle; /* 垂直居中 */
+    border: 1px solid gray;
+    
+  }
+  .video-table video {
+    /* width: 100%;
+    height: auto; */
+    height: 300px;
+    width: auto;
+  }
+  .label-ours {
+    color: lime; /* 预定义的鲜艳绿色 */
+    font-size: 12px;
+    font-weight: bold;
+  
+  }
+
+  .label-gt {
+    color: blue;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  a[href="https://rgbinhandscanning.github.io/"],
+  a[href="https://www.magicleap.com/magic-leap-2"] {
+    text-decoration: underline;
+  }
+</style>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered section-title">
+        <div class="column is-four-fifths">
+          <h2>Comparison with Previous SOTA</h2>
+        </div>
+      </div>
+
+      <div class="tab1">
+        <p>
+        Comparison of ADD-0.1d, ADD-0.5d, and Proj2D on unseen categories of three datasets — Objaverse, Google-Scanned-Objects, and ShapeNet-Objects
+          — with DeepIM, SCFlow, Gen6D, PIZZA, and NOPE. The best results are highlighted in bold.
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./static/images/tab1.png" alt="effect of CMPose" style="width: 80%; display: block; margin: 0 auto;">
+      </div>
+
+      <div class="content has-text-justified video2-text">
+        <p>
+          Comparison with state-of-the-art (SOTA) methods on the HB dataset.The predicted poses of the query images are evaluated by computing their relative poses.
+          In the video, more pronounced pose jitter indicates inferior prediction performance. As can be observed, our model achieves the best overall performance.
+        </p>
+      </div>
+
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <div class="columns is-centered has-text-centered section-title">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Visual visualization</h2>
+        </div>
+      </div>
+
+      <div class="fig_3-centered">
+        <p>
+          Visualization of intermediate optical flow and pose variations under complex backgrounds. Q and R denote the reference and
+          query images, respectively. As the number of flow refinement iterations increases, the pose estimates are progressively improved
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./static/images/img2.png" alt="effect of CMPose" style="width: 90%; display: block; margin: 0 auto;">
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <div class="columns is-centered has-text-centered section-title">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Application to 3D Reconstruction</h2>
+        </div>
+      </div>
+
+      <div class="tab2_fig3_fig4">
+        <p>
+          Our proposed method is applied to the field of 3D reconstruction. We evaluate the average pose estimation metrics
+          and reconstruction quality of our model in comparison with VGGT across ten scenes from the DTU dataset.
+
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./static/images/tab2.png" alt="effect of CMPose" style="width: 80%; display: block; margin: 0 auto;">
+      </div>
+
+      <div class="tab2_fig3_fig4">
+        <p>
+          The rotation and translation error histograms predicted by VGGT and by our method are presented. The horizontal axis represents Frequency.
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./static/images/img3.png" alt="effect of CMPose" style="width: 80%; display: block; margin: 0 auto;">
+      </div>
+
+      <div class="tab2_fig3_fig4">
+        <p>
+          3D Gaussian Splatting (3DGS) reconstructions of seven DTU scenes using poses from Ground-truth, VGGT, and our method. Our estimated poses consistently
+          produce sharper reconstructions with more accurate geometry.
+
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./static/images/img4.png" alt="effect of CMPose" style="width: 80%; display: block; margin: 0 auto;">
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="Citation-text">
+        <p>
+          Citation
+        </p>
+    </div>
+
+    <div class="content has-text-justified fig_1-text">
+        <p>
+          If you find this work useful in your research, please consider citing:
+        </p>
+    </div>
+    <pre><code>@inproceedings{zhang2026CMPose,
+      title     = {Learning Relative Object Pose with Coupled Matching-Pose Network},
+      author    = {Zhang, Zhengtai and Song, Rui and Zhang, Jiafeng and Li, Jiaojiao and Cao Kailang, Kerui and Ferstl, David and Hu, Yinlin},
+      journal   = {arXiv preprint},
+      year      = {2026},
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    The webpage is adapted from  <a
+    href="https://github.com/SCFlow2/SCFlow2.github.io">here</a>.
+  </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+/* ============================
+   Section title (paper style)
+   ============================ */
+
+.section-title h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  font-weight: 700;     /* 加粗 */
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+}
+
+.paper-text {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.paper-text p {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* ============================
+   Paper-style text (Abstract / Overview)
+   ============================ */
+
+.fig_1-text {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.fig_1-text p {
+  font-size: 20px;
+  line-height: 1.1;
+}
+/* ============================
+   Figure / Table text (centered, adjustable margins)
+   ============================ */
+
+.tab1 {
+  font-family: "Times New Roman", Times, serif;
+
+  /* 控制整体宽度 / 页边距 */
+  max-width: 88%;        /* ← 调这个：例如 70% / 75% / 85% */
+  margin: 0 auto;        /* 居中 */
+  text-align: justify;   /* 两端对齐 */
+}
+
+.tab1 {
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.video2-text {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.video2-text p {
+  font-size: 20px;
+  line-height: 1.1;
+
+      /* 如果想控制段落内部的间距也可以单独设置 */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.fig_3-centered {
+  font-family: "Times New Roman", Times, serif;
+
+  /* 控制整体宽度 / 页边距 */
+  max-width: 95%;        /* ← 调这个：例如 70% / 75% / 85% */
+  margin: 0 auto;        /* 居中 */
+  text-align: justify;   /* 两端对齐 */
+}
+
+.fig_3-centered p {
+  font-size: 20px;
+  line-height: 1.1;
+    margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.tab2_fig3_fig4 {
+  font-family: "Times New Roman", Times, serif;
+
+  /* 控制整体宽度 / 页边距 */
+  max-width: 85%;        /* ← 调这个：例如 70% / 75% / 85% */
+  margin: 0 auto;        /* 居中 */
+  text-align: justify;   /* 两端对齐 */
+}
+
+.tab2_fig3_fig4 p {
+  font-size: 20px;
+  line-height: 1.1;
+    margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ============================
+   Reduce section spacing (paper style)
+   ============================ */
+
+.section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.hero-body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.Citation-text {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.Citation-text p {
+  font-size: 32px;
+  line-height: 1.1;
+    font-weight: 700;
+      /* 如果想控制段落内部的间距也可以单独设置 */
+  margin-bottom: 0.5em;
+}
